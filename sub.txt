@@ -1,16 +1,11 @@
 clan://localhost/clan_content/tvbox/sub.txt
 
 饭太硬,https://饭太硬.top/tv
-肥猫,http://我不是.肥猫.love:63/接口禁止贩卖
 蜂蜜,https://ghproxy.net/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json
 欧歌,https://tv.nxog.top/m/
-道长,https://drpy.site/js1
-巧技,http://pandown.pro/tvbox/tvbox.json
 运输车,https://weixine.net/ysc.json
 菜妮丝,https://tvbox.cainisi.cf
 俊于,https://ghproxy.net/https://raw.githubusercontent.com/junyu1234/box/main/tvbox.json
-小米,https://ghproxy.net/https://raw.githubusercontent.com/xiaomifans/TVBOX/main/tvbox.json
 星辰,https://ghproxy.net/https://raw.githubusercontent.com/XC474671090/XCBox/main/XC.json
 南风,https://ghproxy.net/https://raw.githubusercontent.com/Yoursmile7/TVBox/main/XC.json
 Ray,https://ghproxy.net/https://raw.githubusercontent.com/hjdhnx/dr_py/main/js.json
-多多,https://ghproxy.net/https://raw.githubusercontent.com/duoduo123/tvbox/main/ys.json
