@@ -1,11 +1,18 @@
 clan://localhost/clan_content/tvbox/sub.txt
 
+# ========== 稳定精选 ==========
 饭太硬,https://饭太硬.top/tv
-蜂蜜,https://ghproxy.net/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json
 欧歌,https://tv.nxog.top/m/
-运输车,https://weixine.net/ysc.json
 菜妮丝,https://tvbox.cainisi.cf
-俊于,https://ghproxy.net/https://raw.githubusercontent.com/junyu1234/box/main/tvbox.json
-星辰,https://ghproxy.net/https://raw.githubusercontent.com/XC474671090/XCBox/main/XC.json
 南风,https://ghproxy.net/https://raw.githubusercontent.com/Yoursmile7/TVBox/main/XC.json
 Ray,https://ghproxy.net/https://raw.githubusercontent.com/hjdhnx/dr_py/main/js.json
+
+# ========== 采集/聚合 ==========
+蜂蜜,https://ghproxy.net/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json
+俊于,https://ghproxy.net/https://raw.githubusercontent.com/junyu1234/box/main/tvbox.json
+星辰,https://ghproxy.net/https://raw.githubusercontent.com/XC474671090/XCBox/main/XC.json
+运输车,https://weixine.net/ysc.json
+
+# ========== 备用 ==========
+备用一,https://cdn.jsdelivr.net/gh/yunhugy/test-node-repo@main/m.json
+备用二,https://ghproxy.net/https://raw.githubusercontent.com/yunhugy/test-node-repo/main/m.json
