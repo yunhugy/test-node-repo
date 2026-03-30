@@ -1,18 +1,15 @@
-clan://localhost/clan_content/tvbox/sub.txt
+# 豪华版影视订阅源 by yunhugy
+# 更新时间: 2026-03-30
 
-# ========== 稳定精选 ==========
-饭太硬,https://饭太硬.top/tv
-欧歌,https://tv.nxog.top/m/
-菜妮丝,https://tvbox.cainisi.cf
-南风,https://ghproxy.net/https://raw.githubusercontent.com/Yoursmile7/TVBox/main/XC.json
-Ray,https://ghproxy.net/https://raw.githubusercontent.com/hjdhnx/dr_py/main/js.json
+## 主订阅（稳定精选）
+https://cdn.jsdelivr.net/gh/yunhugy/test-node-repo@main/m.json
 
-# ========== 采集/聚合 ==========
-蜂蜜,https://ghproxy.net/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json
-俊于,https://ghproxy.net/https://raw.githubusercontent.com/junyu1234/box/main/tvbox.json
-星辰,https://ghproxy.net/https://raw.githubusercontent.com/XC474671090/XCBox/main/XC.json
-运输车,https://weixine.net/ysc.json
+## 高质量聚合源
+https://cdn.jsdelivr.net/gh/gaotianliuyun/gao@master/js.json
 
-# ========== 备用 ==========
-备用一,https://cdn.jsdelivr.net/gh/yunhugy/test-node-repo@main/m.json
-备用二,https://ghproxy.net/https://raw.githubusercontent.com/yunhugy/test-node-repo/main/m.json
+## 备用线路（ghproxy加速）
+https://ghproxy.net/https://raw.githubusercontent.com/yunhugy/test-node-repo/main/m.json
+https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json
+
+## IPTV直播源
+https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.txt
