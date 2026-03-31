@@ -1,15 +1,20 @@
-# 豪华版影视订阅源 by yunhugy
-# 更新时间: 2026-03-30
+# OK影视增强版订阅
+# 基于 zmivip/Tvbox 的思路重构：去掉 jar/js 依赖，仅保留标准 type=1 苹果CMS接口，提升兼容性与可用性。
 
-## 主订阅（稳定精选）
+主配置：
 https://cdn.jsdelivr.net/gh/yunhugy/test-node-repo@main/m.json
 
-## 高质量聚合源
-https://cdn.jsdelivr.net/gh/gaotianliuyun/gao@master/js.json
+备用直链：
+https://raw.githubusercontent.com/yunhugy/test-node-repo/main/m.json
 
-## 备用线路（ghproxy加速）
+加速备用：
 https://ghproxy.net/https://raw.githubusercontent.com/yunhugy/test-node-repo/main/m.json
-https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json
 
-## IPTV直播源
-https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.txt
+已验证可用源：
+1. 量子资源
+2. 无尽资源
+3. 速播资源
+4. 卧龙资源
+5. 暴风资源
+6. 非凡资源
+7. 闪电资源
