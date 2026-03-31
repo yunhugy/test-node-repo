@@ -1,9 +1,10 @@
 {
   "spider": "",
   "wallpaper": "https://bing.img.run/rand.php",
+  "homepage": "https://github.com/yunhugy/test-node-repo",
   "sites": [
     {
-      "key": "src_1",
+      "key": "lzi",
       "name": "量子资源",
       "type": 1,
       "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/at/json/",
@@ -12,7 +13,7 @@
       "filterable": 1
     },
     {
-      "key": "src_2",
+      "key": "wujin",
       "name": "无尽资源",
       "type": 1,
       "api": "https://api.wujinapi.me/api.php/provide/vod/at/json/",
@@ -21,7 +22,7 @@
       "filterable": 1
     },
     {
-      "key": "src_3",
+      "key": "subo",
       "name": "速播资源",
       "type": 1,
       "api": "https://subocaiji.com/api.php/provide/vod/at/json/",
@@ -30,10 +31,37 @@
       "filterable": 1
     },
     {
-      "key": "src_4",
+      "key": "wolong",
       "name": "卧龙资源",
       "type": 1,
       "api": "https://collect.wolongzyw.com/api.php/provide/vod/at/json/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "baofeng",
+      "name": "暴风资源",
+      "type": 1,
+      "api": "https://bfzyapi.com/api.php/provide/vod/at/json/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "feifan",
+      "name": "非凡资源",
+      "type": 1,
+      "api": "https://cj.ffzyapi.com/api.php/provide/vod/at/json/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "shandian",
+      "name": "闪电资源",
+      "type": 1,
+      "api": "https://sdzyapi.com/api.php/provide/vod/at/json/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -41,42 +69,38 @@
   ],
   "lives": [
     {
-      "name": "IPTV直播",
+      "name": "范明明IPv6",
       "type": 0,
-      "url": "https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.txt",
+      "url": "https://live.fanmingming.com/tv/m3u/ipv6.m3u",
       "playerType": 1,
-      "epg": "http://diyp.112114.xyz/?ch={name}&date={date}",
+      "epg": "https://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "YueChan综合",
+      "type": 0,
+      "url": "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
+      "playerType": 1,
+      "epg": "https://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "https://epg.112114.xyz/logo/{name}.png"
     }
   ],
   "parses": [
     {
-      "name": "聚合解析",
+      "name": "线路1",
       "type": 0,
       "url": "https://jx.jsonplayer.com/player/?url="
     },
     {
-      "name": "虾米解析",
+      "name": "线路2",
       "type": 0,
       "url": "https://jx.xmflv.com/?url="
     },
     {
-      "name": "八戒解析",
+      "name": "线路3",
       "type": 0,
-      "url": "https://jx.bajiecaiji.com/jexi/?url="
+      "url": "https://jx.bajiecaiji.com/jiexi/?url="
     }
   ],
-  "flags": [
-    "youku",
-    "qq",
-    "iqiyi",
-    "qiyi",
-    "letv",
-    "sohu",
-    "tudou",
-    "pptv",
-    "mgtv",
-    "wasu",
-    "bilibili"
-  ]
+  "flags": ["youku", "qq", "iqiyi", "qiyi", "letv", "sohu", "tudou", "pptv", "mgtv", "wasu", "bilibili"]
 }
