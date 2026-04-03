@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import json, base64, os, sys, subprocess, datetime, hashlib
+import json, hashlib, sys, subprocess, datetime, requests
 from pathlib import Path
-import requests
+import os
 
-TOKEN = os.getenv("GITHUB_TOKEN")          # CI 环境自动注入
+TOKEN = os.getenv("GITHUB_TOKEN")          # GitHub 自动注入的 token
 REPO = "yunhugy/test-node-repo"            # 你的仓库
 WORKDIR = Path("/tmp/refresh_workdir")
-OUT_DIR = Path(".")                        # 仓库根目录（与 workflow 中的 run 命令同级）
+OUT_DIR = Path(".")                        # 与工作流中路径保持一致
 
-# ---------- 1️⃣ 下载 fishforks/ol 仓库 ----------
+# --------------------------------------------------------------
+# 1️⃣ 克隆 fishforks/ol 仓库（增量更新）
+# --------------------------------------------------------------
 def clone_ol():
     WORKDIR.mkdir(parents=True, exist_ok=True)
     repo_dir = WORKDIR / "ol"
@@ -21,21 +23,20 @@ def clone_ol():
                         "https://github.com/fishforks/ol.git"], cwd=repo_dir)
     return repo_dir
 
-# ---------- 2️⃣ 过滤 & 验证可用的 type=1 接口 ----------
+# --------------------------------------------------------------
+# 2️⃣ 过滤并验证可用的 type=1 接口 + 特殊站
+# --------------------------------------------------------------
 VALID_SITES = []
+
 def detect_sites(root: Path):
-    """
-    遍历 *.txt，找出形如：
-        "api": "https://xxx/xxx.txt"
-    并通过一次 HEAD 请求确保能访问（200 OK）。
-    """
+    # ---- 2.1 自动遍历所有 *.txt，寻找 type=1 接口 ----
     for txt_path in root.glob("*.txt"):
         try:
             data = json.loads(txt_path.read_text(encoding="utf-8"))
             api = data.get("api") or data.get("url")
             if not api:
                 continue
-            # 必须是完整的 HTTP(S) URL，且指向 .txt 文件
+            # 必须是完整的 HTTP(S) URL 且以 .txt 结尾
             if not api.startswith("https://") or not api.lower().endswith(".txt"):
                 continue
             # HEAD 检查可达性
@@ -50,12 +51,69 @@ def detect_sites(root: Path):
                     "quickSearch": 1,
                     "filterable": 1
                 })
-        except Exception as e:
+        except Exception:
             continue
 
-# ---------- 3️⃣ 构造标准 JSON（m.json） ----------
+    # ---- 2.2 专门处理 木偶、玩偶、豆瓣、网盘登录（来自 fishforks/ol 已知路径）----
+    extra_candidates = {
+        "木偶（哥哥）": "https://raw.githubusercontent.com/fishforks/ol/main/PG.txt",
+        "玩偶（哥哥）": "https://raw.githubusercontent.com/fishforks/ol/main/小马.txt",
+        "豆瓣（电影）": "https://raw.githubusercontent.com/fishforks/ol/main/云星日记.txt",
+        "网盘登录（alist）": "https://raw.githubusercontent.com/fishforks/ol/main/老刘备.txt",
+    }
+    for key, url in extra_candidates.items():
+        if any(s["api"] == url for s in VALID_SITES):
+            continue
+        try:
+            r = requests.head(url, timeout=8, allow_redirects=True)
+            if r.status_code == 200:
+                VALID_SITES.append({
+                    "key": hashlib.sha1(url.encode()).hexdigest()[:8],
+                    "name": key,
+                    "type": 1,
+                    "api": url,
+                    "searchable": 1,
+                    "quickSearch": 1,
+                    "filterable": 1
+                })
+            else:
+                print(f"[DEBUG] {key} ({url}) unreachable, skip.")
+        except Exception as e:
+            print(f"[DEBUG] {key} ({url}) error: {e}, skip.")
+
 def build_json():
-    sites = VALID_SITES[:7]          # 最多保留 7 条，超出可自行截断
+    # --------------------------------------------------------------
+    # 3️⃣ 专门加入 木偶哥哥 实际可用的 CSP/JSON 接口（多个候选项）
+    # --------------------------------------------------------------
+    # 木偶哥哥常用的JSON接口（从已知TVBox配置中提取）
+    wogg_candidates = [
+        {
+            "name": "木偶哥哥（csp）",
+            "key": "csp_wogg",
+            "type": 3,
+            "api": "csp_Wogg",
+            "ext": "https://666.666291.xyz/",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1
+        },
+        {
+            "name": "木偶全站",
+            "key": "wogg_full",
+            "type": 3,
+            "api": "csp_Wogg",
+            "ext": "https://www.wogg.net/",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1
+        }
+    ]
+    # 先取现有的 type=1 站点，最多保留7个
+    sites = VALID_SITES[:7] + wogg_candidates
+
+    # --------------------------------------------------------------
+    # lives 与 parses 保持不变
+    # --------------------------------------------------------------
     lives = [
         {
             "name": "范明明IPv6",
@@ -79,6 +137,7 @@ def build_json():
         {"name": "线路2", "type": 0, "url": "https://jx.xmflv.com/?url="},
         {"name": "线路3", "type": 0, "url": "https://jx.bajiecaiji.com/jiexi/?url="}
     ]
+
     payload = {
         "homepage": f"https://github.com/{REPO}",
         "wallpaper": "https://bing.img.run/rand.php",
@@ -89,9 +148,13 @@ def build_json():
             "youku","qq","iqiyi","qiyi","letv","sohu","tudou","pptv","mgtv","wasu","bilibili"
         ]
     }
-    OUT_DIR / "m.json".write_text(json.dumps(payload, ensure_ascii=False, indent=2))
+    OUT_DIR / "m.json".write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2)
+    )
 
-# ---------- 4️⃣ 生成说明显文件（sub.txt） ----------
+# --------------------------------------------------------------
+# 4️⃣ 生成使用说明文档（sub.txt）
+# --------------------------------------------------------------
 def build_sub_txt():
     lines = [
         "# OK影视·自动刷新版订阅（基于 fishforks/ol）",
@@ -105,11 +168,17 @@ def build_sub_txt():
         "## 加速备用（ghproxy）",
         "https://ghproxy.net/https://raw.githubusercontent.com/yunhugy/test-node-repo/main/m.json",
         "",
-        "## 可用站点（全部为 type=1 接口）",
+        "## 可用站点（type=1 + type=3 混合）",
     ]
-    for s in VALID_SITES:
+
+    for s in sorted(VALID_SITES, key=lambda x: x["name"]):
         lines.append(f"- {s['name']}   {s['api']}")
+
     lines.extend([
+        "",
+        "## 木偶哥哥（666.666291.xyz）",
+        "- 木偶哥哥（csp）   type=3, api=csp_Wogg, ext=https://666.666291.xyz/",
+        "- 木偶全站         type=3, api=csp_Wogg, ext=https://www.wogg.net/",
         "",
         "## 直播源",
         "- 范明明IPv6   （已在 lives 中）",
@@ -122,29 +191,26 @@ def build_sub_txt():
         "⚠️ 注意：直接把上表中的任意一条链接填入 OK 影视的「订阅地址」即可，"
         "若出现空白请检查是否复制了多余的空格或换行。"
     ])
+
     (OUT_DIR / "sub.txt").write_text("\n".join(lines), encoding="utf-8")
 
-# ---------- 5️⃣ Git 提交（仅在有变更时） ----------
+# --------------------------------------------------------------
+# 5️⃣ Git 提交（仅在有变动时）
+# --------------------------------------------------------------
 def git_commit_and_push():
-    # 配置 Git
     subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=False)
     subprocess.run(["git", "config", "--global", "user.email", "actions@github.com"], check=False)
 
-    # 检查是否有改动
-    status = subprocess.run(
-        ["git", "diff", "--quiet"], capture_output=True
-    )
-    if status.returncode != 0:        # 有改动
+    status = subprocess.run(["git", "diff", "--quiet"], capture_output=True)
+    if status.returncode != 0:
         subprocess.run(["git", "add", "m.json", "sub.txt"])
-        # 自动生成 commit message，带上日期
         cm = f"refreshed subscriptions on {datetime.datetime.utcnow().isoformat()}Z"
         subprocess.run(["git", "commit", "-m", cm])
         subprocess.run(["git", "push", "origin", "HEAD"])
         print("✅ 更新并推送完成")
     else:
-        print("ℹ️ 无变更，无需提交")
+        print("ℹ️ 无变动，跳过提交")
 
-# ---------- 6️⃣ 主流程 ----------
 def main():
     root = clone_ol()
     detect_sites(root)
