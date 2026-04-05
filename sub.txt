@@ -1,5 +1,4 @@
 # OK影视增强版订阅
-# 基于 zmivip/Tvbox 的思路重构：去掉 jar/js 依赖，仅保留标准 type=1 苹果CMS接口，提升兼容性与可用性。
 
 主配置：
 https://cdn.jsdelivr.net/gh/yunhugy/test-node-repo@main/m.json
@@ -10,11 +9,25 @@ https://raw.githubusercontent.com/yunhugy/test-node-repo/main/m.json
 加速备用：
 https://ghproxy.net/https://raw.githubusercontent.com/yunhugy/test-node-repo/main/m.json
 
-已验证可用源：
-1. 量子资源
-2. 无尽资源
-3. 速播资源
-4. 卧龙资源
-5. 暴风资源
-6. 非凡资源
-7. 闪电资源
+已检测保留的公益API：
+- TG搜公益api: https://tgsou.252035.xyz
+- 盘搜公益api: https://so.252035.xyz
+- 盘搜公益api: https://pan.wnng.cn
+- PanCheck公益api: https://pancheck.199333.xyz
+- 弹幕公益api: https://logo.saodu.work:8888/87654321
+- 弹幕公益api: https://danmu.iyo.us.ci/theft-dastardly-prognosis-hula-agenda2-dropkick
+- 弹幕公益api: https://danmua.netlify.app/cinetry
+
+已剔除失效API：
+- https://so.566987.xyz
+- https://fjj0417.dpdns.org/87654321
+- https://313236.xyz/87654321
+- https://danmu-api-five-pink.vercel.app/999999
+
+新增工具/入口：
+- TG搜（公益）
+- 盘搜（公益）
+- PanCheck（公益）
+- 公益弹幕 x3
+- 网盘配置 Alist
+- 木偶哥哥 666.666291.xyz

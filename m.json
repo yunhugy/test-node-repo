@@ -65,6 +65,119 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
+    },
+    {
+      "key": "tg_search_public",
+      "name": "TG搜丨公益",
+      "type": 3,
+      "api": "csp_TGYunPanLocal",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1,
+      "timeout": 60,
+      "ext": "./lib/token.json$$$https://tgsou.252035.xyz/$$$null$$$1"
+    },
+    {
+      "key": "pan_search_252035",
+      "name": "盘搜丨公益1",
+      "type": 3,
+      "api": "csp_PanSou",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1,
+      "ext": {
+        "site": "https://so.252035.xyz",
+        "danmu": false
+      }
+    },
+    {
+      "key": "pan_search_wnng",
+      "name": "盘搜丨公益2",
+      "type": 3,
+      "api": "csp_PanSou",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1,
+      "ext": {
+        "site": "https://pan.wnng.cn",
+        "danmu": false
+      }
+    },
+    {
+      "key": "pancheck_public",
+      "name": "PanCheck丨公益",
+      "type": 3,
+      "api": "csp_PanCheck",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1,
+      "ext": {
+        "site": "https://pancheck.199333.xyz",
+        "danmu": false
+      }
+    },
+    {
+      "key": "wogg_mogg_666",
+      "name": "木偶哥哥┃4K",
+      "type": 3,
+      "api": "csp_Wogg",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "siteUrl": "https://666.666291.xyz/",
+        "danMu": "弹"
+      }
+    },
+    {
+      "key": "danmu_public_1",
+      "name": "弹幕公益1",
+      "type": 3,
+      "api": "csp_Danmu",
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 1,
+      "ext": {
+        "url": "https://logo.saodu.work:8888/87654321",
+        "danmu": true
+      }
+    },
+    {
+      "key": "danmu_public_2",
+      "name": "弹幕公益2",
+      "type": 3,
+      "api": "csp_Danmu",
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 1,
+      "ext": {
+        "url": "https://danmu.iyo.us.ci/theft-dastardly-prognosis-hula-agenda2-dropkick",
+        "danmu": true
+      }
+    },
+    {
+      "key": "danmu_public_3",
+      "name": "弹幕公益3",
+      "type": 3,
+      "api": "csp_Danmu",
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 1,
+      "ext": {
+        "url": "https://danmua.netlify.app/cinetry",
+        "danmu": true
+      }
+    },
+    {
+      "key": "alist_login",
+      "name": "网盘配置┃Alist",
+      "type": 3,
+      "api": "csp_AList",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "ext": "https://raw.liucn.cc/box/libs/js/alist.json"
     }
   ],
   "lives": [
@@ -102,5 +215,17 @@
       "url": "https://jx.bajiecaiji.com/jiexi/?url="
     }
   ],
-  "flags": ["youku", "qq", "iqiyi", "qiyi", "letv", "sohu", "tudou", "pptv", "mgtv", "wasu", "bilibili"]
+  "flags": [
+    "youku",
+    "qq",
+    "iqiyi",
+    "qiyi",
+    "letv",
+    "sohu",
+    "tudou",
+    "pptv",
+    "mgtv",
+    "wasu",
+    "bilibili"
+  ]
 }
