@@ -9,25 +9,43 @@ https://raw.githubusercontent.com/yunhugy/test-node-repo/main/m.json
 加速备用：
 https://ghproxy.net/https://raw.githubusercontent.com/yunhugy/test-node-repo/main/m.json
 
-已检测保留的公益API：
-- TG搜公益api: https://tgsou.252035.xyz
-- 盘搜公益api: https://so.252035.xyz
-- 盘搜公益api: https://pan.wnng.cn
-- PanCheck公益api: https://pancheck.199333.xyz
-- 弹幕公益api: https://logo.saodu.work:8888/87654321
-- 弹幕公益api: https://danmu.iyo.us.ci/theft-dastardly-prognosis-hula-agenda2-dropkick
-- 弹幕公益api: https://danmua.netlify.app/cinetry
+站点统计：
+- 总站点数：20
+- 稳定源：7
+- 公益/工具源：9
+- 动态补充源：4
 
-已剔除失效API：
-- https://so.566987.xyz
-- https://fjj0417.dpdns.org/87654321
-- https://313236.xyz/87654321
-- https://danmu-api-five-pink.vercel.app/999999
+本次变化：
+- 新增：0
+- 移除：0
+- 变更：0
 
-新增工具/入口：
-- TG搜（公益）
-- 盘搜（公益）
-- PanCheck（公益）
-- 公益弹幕 x3
-- 网盘配置 Alist
-- 木偶哥哥 666.666291.xyz
+当前保留站点：
+- 量子资源: https://cj.lziapi.com/api.php/provide/vod/at/json
+- 无尽资源: https://api.wujinapi.me/api.php/provide/vod/at/json
+- 速播资源: https://subocaiji.com/api.php/provide/vod/at/json
+- 卧龙资源: https://collect.wolongzyw.com/api.php/provide/vod/at/json
+- 暴风资源: https://bfzyapi.com/api.php/provide/vod/at/json
+- 非凡资源: https://cj.ffzyapi.com/api.php/provide/vod/at/json
+- 闪电资源: https://sdzyapi.com/api.php/provide/vod/at/json
+- TG搜丨公益: csp_TGYunPanLocal
+- 盘搜丨公益1: https://so.252035.xyz
+- 盘搜丨公益2: https://pan.wnng.cn
+- PanCheck丨公益: https://pancheck.199333.xyz
+- 木偶哥哥┃4K: https://666.666291.xyz
+- 弹幕公益1: https://logo.saodu.work:8888/87654321
+- 弹幕公益2: https://danmu.iyo.us.ci/theft-dastardly-prognosis-hula-agenda2-dropkick
+- 弹幕公益3: https://danmua.netlify.app/cinetry
+- 网盘配置┃Alist: https://raw.liucn.cc/box/libs/js/alist.json
+- 木偶（哥哥）: https://raw.githubusercontent.com/fishforks/ol/main/PG.txt
+- 玩偶（哥哥）: https://raw.githubusercontent.com/fishforks/ol/main/%E5%B0%8F%E9%A9%AC.txt
+- 豆瓣（电影）: https://raw.githubusercontent.com/fishforks/ol/main/%E4%BA%91%E6%98%9F%E6%97%A5%E8%AE%B0.txt
+- 网盘登录（alist）: https://raw.githubusercontent.com/fishforks/ol/main/%E8%80%81%E5%88%98%E5%A4%87.txt
+
+失效或未纳入动态候选：
+- 无
+
+说明：
+- 可直接把上方主配置链接填入 OK 影视订阅地址
+- 仓库已加入健康度记录、去重、校验、差异报告、失败回滚保护
+- 若自动刷新异常，将优先保留现有可用主配置，避免坏数据覆盖

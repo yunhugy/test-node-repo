@@ -7,7 +7,7 @@
       "key": "lzi",
       "name": "量子资源",
       "type": 1,
-      "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/at/json/",
+      "api": "https://cj.lziapi.com/api.php/provide/vod/at/json/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -178,6 +178,42 @@
       "filterable": 1,
       "changeable": 1,
       "ext": "https://raw.liucn.cc/box/libs/js/alist.json"
+    },
+    {
+      "key": "261b04b5",
+      "name": "木偶（哥哥）",
+      "type": 1,
+      "api": "https://raw.githubusercontent.com/fishforks/ol/main/PG.txt",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "bcf5a9e4",
+      "name": "玩偶（哥哥）",
+      "type": 1,
+      "api": "https://raw.githubusercontent.com/fishforks/ol/main/%E5%B0%8F%E9%A9%AC.txt",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "b6fdaac2",
+      "name": "豆瓣（电影）",
+      "type": 1,
+      "api": "https://raw.githubusercontent.com/fishforks/ol/main/%E4%BA%91%E6%98%9F%E6%97%A5%E8%AE%B0.txt",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "d9e8ef91",
+      "name": "网盘登录（alist）",
+      "type": 1,
+      "api": "https://raw.githubusercontent.com/fishforks/ol/main/%E8%80%81%E5%88%98%E5%A4%87.txt",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
     }
   ],
   "lives": [

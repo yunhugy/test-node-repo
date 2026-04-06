@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-04-06T13:34:04.542390+00:00",
+  "repo": "yunhugy/test-node-repo",
+  "site_count": 20,
+  "stats": {
+    "stable_sites": 7,
+    "public_sites": 9,
+    "dynamic_sites": 4
+  },
+  "upstream": {
+    "available": true,
+    "logs": [
+      "git pull exit=0",
+      "Already up to date."
+    ]
+  },
+  "dynamic_checks": [
+    {
+      "name": "木偶（哥哥）",
+      "ok": true,
+      "method": "HEAD",
+      "status": 200,
+      "endpoint": "https://raw.githubusercontent.com/fishforks/ol/main/PG.txt",
+      "error": null,
+      "priority": 60
+    },
+    {
+      "name": "玩偶（哥哥）",
+      "ok": true,
+      "method": "HEAD",
+      "status": 200,
+      "endpoint": "https://raw.githubusercontent.com/fishforks/ol/main/%E5%B0%8F%E9%A9%AC.txt",
+      "error": null,
+      "priority": 58
+    },
+    {
+      "name": "豆瓣（电影）",
+      "ok": true,
+      "method": "HEAD",
+      "status": 200,
+      "endpoint": "https://raw.githubusercontent.com/fishforks/ol/main/%E4%BA%91%E6%98%9F%E6%97%A5%E8%AE%B0.txt",
+      "error": null,
+      "priority": 56
+    },
+    {
+      "name": "网盘登录（alist）",
+      "ok": true,
+      "method": "HEAD",
+      "status": 200,
+      "endpoint": "https://raw.githubusercontent.com/fishforks/ol/main/%E8%80%81%E5%88%98%E5%A4%87.txt",
+      "error": null,
+      "priority": 54
+    }
+  ],
+  "removed_candidates": [],
+  "validation_errors": [],
+  "rollback": {
+    "triggered": false,
+    "reason": "站点数量正常"
+  }
+}
