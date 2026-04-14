@@ -10,13 +10,13 @@ https://raw.githubusercontent.com/yunhugy/test-node-repo/main/m.json
 https://ghproxy.net/https://raw.githubusercontent.com/yunhugy/test-node-repo/main/m.json
 
 站点统计：
-- 总站点数：20
+- 总站点数：21
 - 稳定源：7
-- 公益/工具源：9
+- 公益/工具源：10
 - 动态补充源：4
 
 本次变化：
-- 新增：0
+- 新增：1
 - 移除：0
 - 变更：0
 
@@ -37,6 +37,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/yunhugy/test-node-repo/mai
 - 弹幕公益2: https://danmu.iyo.us.ci/theft-dastardly-prognosis-hula-agenda2-dropkick
 - 弹幕公益3: https://danmua.netlify.app/cinetry
 - 网盘配置┃Alist: https://raw.liucn.cc/box/libs/js/alist.json
+- 欧歌: http://tv.nxog.top/api.php?mz=xb&id=1&b=欧歌
 - 木偶（哥哥）: https://raw.githubusercontent.com/fishforks/ol/main/PG.txt
 - 玩偶（哥哥）: https://raw.githubusercontent.com/fishforks/ol/main/%E5%B0%8F%E9%A9%AC.txt
 - 豆瓣（电影）: https://raw.githubusercontent.com/fishforks/ol/main/%E4%BA%91%E6%98%9F%E6%97%A5%E8%AE%B0.txt

@@ -180,6 +180,17 @@
       "ext": "https://raw.liucn.cc/box/libs/js/alist.json"
     },
     {
+      "key": "ouge_nxog",
+      "name": "欧歌",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "ext": "http://tv.nxog.top/api.php?mz=xb&id=1&b=欧歌"
+    },
+    {
       "key": "261b04b5",
       "name": "木偶（哥哥）",
       "type": 1,

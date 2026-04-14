@@ -8,12 +8,18 @@
           "ok": true,
           "method": "HEAD",
           "status": 200
+        },
+        {
+          "at": "2026-04-14T00:34:05.909671+00:00",
+          "ok": true,
+          "method": "HEAD",
+          "status": 200
         }
       ],
       "success_rate": 1.0,
-      "checks": 1,
+      "checks": 2,
       "last_ok": true,
-      "last_checked_at": "2026-04-06T13:34:04.523689+00:00"
+      "last_checked_at": "2026-04-14T00:34:05.909671+00:00"
     },
     "https://raw.githubusercontent.com/fishforks/ol/main/%E5%B0%8F%E9%A9%AC.txt": {
       "name": "玩偶（哥哥）",
@@ -23,12 +29,18 @@
           "ok": true,
           "method": "HEAD",
           "status": 200
+        },
+        {
+          "at": "2026-04-14T00:34:05.909671+00:00",
+          "ok": true,
+          "method": "HEAD",
+          "status": 200
         }
       ],
       "success_rate": 1.0,
-      "checks": 1,
+      "checks": 2,
       "last_ok": true,
-      "last_checked_at": "2026-04-06T13:34:04.523689+00:00"
+      "last_checked_at": "2026-04-14T00:34:05.909671+00:00"
     },
     "https://raw.githubusercontent.com/fishforks/ol/main/%E4%BA%91%E6%98%9F%E6%97%A5%E8%AE%B0.txt": {
       "name": "豆瓣（电影）",
@@ -38,12 +50,18 @@
           "ok": true,
           "method": "HEAD",
           "status": 200
+        },
+        {
+          "at": "2026-04-14T00:34:05.909671+00:00",
+          "ok": true,
+          "method": "HEAD",
+          "status": 200
         }
       ],
       "success_rate": 1.0,
-      "checks": 1,
+      "checks": 2,
       "last_ok": true,
-      "last_checked_at": "2026-04-06T13:34:04.523689+00:00"
+      "last_checked_at": "2026-04-14T00:34:05.909671+00:00"
     },
     "https://raw.githubusercontent.com/fishforks/ol/main/%E8%80%81%E5%88%98%E5%A4%87.txt": {
       "name": "网盘登录（alist）",
@@ -53,12 +71,18 @@
           "ok": true,
           "method": "HEAD",
           "status": 200
+        },
+        {
+          "at": "2026-04-14T00:34:05.909671+00:00",
+          "ok": true,
+          "method": "HEAD",
+          "status": 200
         }
       ],
       "success_rate": 1.0,
-      "checks": 1,
+      "checks": 2,
       "last_ok": true,
-      "last_checked_at": "2026-04-06T13:34:04.523689+00:00"
+      "last_checked_at": "2026-04-14T00:34:05.909671+00:00"
     }
   }
 }

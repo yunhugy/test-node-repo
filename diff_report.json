@@ -1,7 +1,12 @@
 {
   "old_site_count": 20,
-  "new_site_count": 20,
-  "added": [],
+  "new_site_count": 21,
+  "added": [
+    {
+      "endpoint": "http://tv.nxog.top/api.php?mz=xb&id=1&b=欧歌",
+      "name": "欧歌"
+    }
+  ],
   "removed": [],
   "changed": []
 }
